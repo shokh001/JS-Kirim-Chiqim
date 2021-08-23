@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirim - Chiqim</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Your Modal</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <input type="number" class="form-control mt-4" id="sum" placeholder="Enter your money">
+
+                    <button class="btn btn-success d-block ml-auto mt-4" type="button" data-dismiss="modal" onclick="addText()">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    Kirim Button Modal-->
+    <div class="modal fade" id="myKirimModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Your Kirim-Chiqim Modal</h4>
+                    <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="number" class="form-control" id="kirimSum" placeholder="Enter your kirim-chiqim">
+                    <input type="text" class="form-control mt-4" id="kirimCause" placeholder="Enter your cause">
+
+                    <button class="btn btn-success ml-auto mt-4" type="button" data-dismiss="modal" onclick="kirim('Kirim')"  id="kirim">Save</button>
+                    <button class="btn btn-success ml-auto mt-4" type="button" data-dismiss="modal" onclick="kirim('Chiqim')" id="chiqim">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-10 offset-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center" id="hiName"></h4>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="text-center" id="allSum"></h2>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4 px">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myKirimModal" onclick="borYuq('Kirim')">Kirim</button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myKirimModal" onclick="borYuq('Chiqim')">Chiqim</button>
+                    </div>
+
+                    <div id="alert1"></div>
+
+                    <table class="table table-bordered table-hover table-striped text-center">
+                        <thead>
+                            <tr class="table-secondary">
+                                <th>№</th>
+                                <th>Summa</th>
+                                <th>Sabab</th>
+                                <th>Turi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+</script>
+</body>
+</html>

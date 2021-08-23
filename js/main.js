@@ -2,7 +2,7 @@ let allSum = 0;
 let kirimChiqim = [];
 
 function addText() {
-    let name = document.getElementById("name").value;
+    let name = document.getElementById("name").value;    
     let sum = document.getElementById("sum").value;
 
     if (name.length>0 && sum.length) {

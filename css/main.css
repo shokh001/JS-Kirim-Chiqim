@@ -1,4 +1,14 @@
 .px {
     padding-left: 200px;
     padding-right: 200px;
+    min-width: 800px;
+}
+
+#allSum {
+    min-width: 800px;
+}
+
+
+.table {
+    min-width: 800px;
 }
